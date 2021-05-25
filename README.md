@@ -5,4 +5,4 @@ The Binder repository can be used to allow anyone to access an RStudio environme
 
 For the RStudio environment, we must add the following at the end of the URL: ?urlpath=rstudio
 
-Example: https://mybinder.org/v2/gh/jmea2/test_R_binder/master?urlpath=rstudio
+Example: https://mybinder.org/v2/gh/jmea2/test_R_binder/main?urlpath=rstudio
