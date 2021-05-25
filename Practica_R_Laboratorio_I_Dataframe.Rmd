@@ -1,0 +1,146 @@
+---
+title: "Practicas con R laboratorio I"
+output: pdf_document
+author: " Nombre del estudiante " # colocar su nombre 
+---
+
+```{r, echo=TRUE}
+################################################################################################
+#                                PRACTICAS R SOFTWARE EN EPIDEMIOLOGIA                         #                                                
+################################################################################################
+################################################################################################
+#          LABORATORIO I: CONSTRUYENDO, IMPORTANDO Y TRABAJANDO CON UN DATA FRAME              #                                                       
+################################################################################################
+# Asignatura: Bioestadistica y Demografia
+# Especializacion en Epidemiologia
+# Docente: Jorge Mario Estrada Alvarez MSc. PhD(c) 
+################################################################################################
+# Instrucciones:Para desarrollar el trabajo rellene con codigo encesario para dar respuesta a  #
+# cada uno de los puntos de este Script y ejecute todo el codigo mediante presionando la teclas#
+# Shift+Crtl+K , lo cual permitira que se condense todo en un documento pdf el cual debera ser #
+#  entregado a traves de correo electronico.                                                   #
+################################################################################################
+```
+
+1. Durante la investigación de un probable brote en una unidad renal y tras la aplicacion de metodos
+de investigación epidemiologica se identificaron 12 pacientes que cumplian inicialmente con la definición
+de caso y se recolectaron las variables y datos que se muestran a continuación. Escriba el codigo 
+para construir de manera manual un data frame con los datos recolectados.
+
+|id_pte|	fecha sintomas    |	sala|	maquina|	silla	 |   acceso  |	hemocultivo	 |  resultado     |
+:-----:|:------------------:|:---:|:------:|:-------:|:---------:|:-------------:|:--------------:|
+1	     |     20/05/19	      |   1	|     2  |    38	 |   FISTULA |      NO	     |                |
+2	     |     20/05/19	      |   1	|    37	 |    33	 |   FISTULA |	    NO	     |                |
+3	     |     21/05/19	      |   2	|    28	 |     8	 |   FISTULA |      NO	     |                |
+4	     |     22/05/19	      |   1	|    17	 |    14   |   FISTULA |      NO	     |                |
+5	     |     22/05/19	      |   1	|    33	 |    14	 |   FISTULA |      NO	     |                |
+6	     |     22/05/19	      |   3	|    38	 |     6	 |   FISTULA |      NO	     |                |
+7	     |     23/05/19	      |   2	|    27	 |    17	 |   FISTULA |     	NO	     |                |
+8	     |     23/05/19	      |   3	|    34	 |    10	 |   CATETER |      SI	     | A. baumannii   |
+9	     |     23/05/19	      |   3	|    03	 |    11	 |   CATETER |      SI	     | A. baumannii   |
+10	   |     23/05/19	      |   2	|    31	 |    19	 |   FISTULA |      NO	     |                |
+11	   |     23/05/19	      |   1	|    02	 |    38	 |   FISTULA |      SI	     | A. baumannii   |
+12	   |     22/05/19	      |   3	|    35	 |    31	 |   CATETER |      SI	     | A. baumannii   |
+
+```{r, echo=TRUE}
+# Este espacio "gris" esta exclusivamente dedicado para que coloque el codigo que corresponde
+# a la respuesta de la pregunta anterior, no coloque codigo por fuera de esta area.
+
+
+
+```
+
+2. Mediante codigo evidencie la cantidad de registros y variables que contiene el data frame construido por ud.
+```{r, echo=TRUE}
+# nuemro de variables es:
+
+
+# nuemro de registros es:
+
+
+```
+
+3. Mediante codigo muestre los primeros registros del data frame construido
+```{r, echo=TRUE}
+# Respuesta
+
+
+```
+
+4. Conteste cada una de las siguientes preguntas mediante el codigo que de respuesta
+```{r, echo=TRUE}
+# ¿Qué silla ocupo el paciente nº 5 ?
+
+
+# ¿Qué fecha de inicio de sintomas tuvo  el paciente nº 5 ?
+
+
+# ¿Qué fecha de inicio de sintomas tuvo  el paciente nº 5 ?
+
+
+# ¿Qué acceso tuvo el paciente nº 12 ?
+
+
+# ¿Se le realizó hemocultivo al paciente nº 3 ?
+
+```
+
+5. la hoja de calculo adjunta a esta practica denominada **malaria.xls** que contiene los datos de un estudio de prevalencia realizado por  Instituto de Salud del Pacifico (INSALPA) y se refieren a individuos residentes de un área peri-urbana. importe dicho archivo a R y coloquelos en un data frame.
+
+- edad en años
+- género: 1=M  0=F
+- etnia:  1= negro  0=otro 
+- número de personas en la familia 
+- número de años en el barrio
+- ocupación (rural=1; urbana=0)
+- número de años de escolaridad
+- tomó cloroquina último año (0=no, 1=sí/SEM, 2=sí/automedica)
+- antecedentes de malaria en el último año (1=sí 0=no)
+- número de episodios previos de malaria en el último año
+- conoce los síntomas de la malaria(1=sí  0=no)
+- conoce la etiología de la malaria(1=sí  0=no)
+- conocimiento sobre prevención: toldillo (1=sabe, 0= no)
+- conocimiento sobre prevención: fumigación(1=sabe, 0= no)
+- conocimiento sobre prevención: elimina criaderos (1=sabe, 	0= no)
+- usa toldillo (1=sí, 0=no)
+- usa repelente (1=sí, 0=no
+- usa insecticida (1=sí, 0=no)
+- resultado de gota gruesa (1=positivo  0=negativo)
+
+Conteste las siguiente preguntas con el codigo correspondiente:
+
+```{r, echo=TRUE}
+# Cuantos sujetos fueron encuestados:
+
+
+# de Cuantas variables recolectaron información:
+
+
+```
+
+6. Se requiere que se genere una nueva variable con las edades agruapdas segun la siguiente clasificación:
+- 0-15
+- 16-50
+- 51 y mas
+```{r, echo=TRUE}
+# Coloque aca el codigo q se utilizaria para ejecurar el punto 6
+
+
+
+```
+
+7. A partir de las variables (preguntas de la encuesta relacionadas a conocimiento sobre malaria) se debe producir un puntaje apra cada sujeto, que corresponde al numero de preguntas contestadas afirmativamente, calucle diccho puntaje y agreguelo como variable al data frame.
+```{r, echo=TRUE}
+# Coloque aca el codigo q se utilizaria para ejecurar el punto 7
+
+
+
+```
+
+8. Dentro de las actividades secundarias del estudsio, se debe hacer busqueda activa de malaria entre convivientes positivos, para esto debe extraerse del data frame los casos que cumplan la siguiente condicion:  personas en la familia 2 o mas y que tengan gota gruesa positiva.
+```{r, echo=TRUE}
+# Coloque aca el codigo q se utilizaria para ejecurar el punto 8
+
+
+
+```
